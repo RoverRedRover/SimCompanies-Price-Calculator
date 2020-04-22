@@ -1,0 +1,22 @@
+"""
+
+def calc_min_price(src_cost, xport_cost, xport_mult):
+
+    exchange_price = round((src_cost + xport_cost * xport_mult) / (1 - 0.03 - 0.05),2)
+
+    contract_price = round((src_cost + xport_cost * xport_mult * 0.5) / (1 - 0.05),2)
+
+    return exchange_price, contract_price
+
+src_cost = float(input("Enter sourcing cost:  "))
+xpt_cost = float(input("Enter cost of one shipping container:  "))
+xpt_mult = float(input("Enter this product's transport multiplier:  "))
+
+exchange_price, contract_price = calc_min_price(src_cost, xpt_cost, xpt_mult)
+
+print()
+
+print(f"On the Exchange, sell your product at {exchange_price}.")
+print(f"By contract, sell your product at {contract_price}.")
+
+"""
